@@ -65,3 +65,21 @@ function encryption(key, origABC) {
 
   return ABC;
 }
+
+export function analyzeArray(arr) {
+  const average =
+    arr.reduce((total, curr) => {
+      return (total += curr);
+    }, 0) / arr.length;
+
+  let min = arr[0];
+  let max = arr[0];
+  arr.forEach((x) => {
+    if (x < min) min = x;
+    if (x > max) max = x;
+  });
+
+  const length = arr.length;
+
+  return { average, min, max, length };
+}
