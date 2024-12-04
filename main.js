@@ -1,5 +1,3 @@
-module.exports = capitalize;
-
-function capitalize(str) {
+export function capitalize(str) {
   return str.toUpperCase();
 }
